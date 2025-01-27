@@ -19,11 +19,11 @@ class BoustrophedonController(Node):
         self.declare_parameters(
             namespace='',
             parameters=[
-                ('Kp_linear', 10.0),
-                ('Kd_linear', 0.1),
-                ('Kp_angular', 5.0),
-                ('Kd_angular', 0.2),
-                ('spacing', 1.0)
+                ('Kp_linear', 1.5), # a higher Kp_linear would make the turtle go in circles and a low Kp would move slowly
+                ('Kd_linear', 0.09),#  higher Kd_linear would lead to the turtle moving back and forth which is not desired
+                ('Kp_angular', 8.0),# higher Kp_angular would lead to very small turning that could lead to intersections
+                ('Kd_angular', 0.05),# higher Kd_angular would lead to rapid turning that could lead to an unusual trajectory
+                ('spacing', 0.5)
             ]
         )
         
